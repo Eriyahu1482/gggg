@@ -1,0 +1,44 @@
+﻿<Window x:Class="gggg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:gggg"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Первый список -->
+        <ListBox x:Name="LB1" Grid.Column="0" Width="300" Margin="10"
+                 PreviewMouseMove="LB1_MouseMove" 
+                 PreviewMouseLeftButtonDown="LB1_PreviewMouseLeftButtonDown"
+                 AllowDrop="True"
+                 Drop="LB1_Drop">
+            <ListBoxItem>Item 1</ListBoxItem>
+            <ListBoxItem>Item 2</ListBoxItem>
+            <ListBoxItem>Item 3</ListBoxItem>
+            <ListBoxItem>Item 4</ListBoxItem>
+            <ListBoxItem>Item 5</ListBoxItem>
+        </ListBox>
+
+        <!-- Второй список -->
+        <ListBox x:Name="LB2" Grid.Column="1" Width="300" Margin="10"
+                 PreviewMouseMove="LB2_MouseMove"
+                 PreviewMouseLeftButtonDown="LB2_PreviewMouseLeftButtonDown"
+                 AllowDrop="True"
+                 Drop="LB2_Drop">
+            <ListBoxItem>Item A</ListBoxItem>
+            <ListBoxItem>Item B</ListBoxItem>
+            <ListBoxItem>Item C</ListBoxItem>
+            <ListBoxItem>Item D</ListBoxItem>
+            <ListBoxItem>Item E</ListBoxItem>
+        </ListBox>
+    </Grid>
+</Window>
